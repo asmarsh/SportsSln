@@ -36,7 +36,7 @@ namespace SportsStore.Tests
             Mock<HttpContext> mockContext = new Mock<HttpContext>();
             mockContext.SetupGet(c => c.Session).Returns(mockSession.Object);
             // Action
-            CartModel cartModel = new CartModel(mockRepo.Object)
+            CartModel cartModel = new CartModel(mockRepo.Object, testCart)
             {
                 PageContext = new PageContext(new ActionContext
                 {
@@ -69,7 +69,7 @@ namespace SportsStore.Tests
             Mock<HttpContext> mockContext = new Mock<HttpContext>();
             mockContext.SetupGet(c => c.Session).Returns(mockSession.Object);
             // Action
-            CartModel cartModel = new CartModel(mockRepo.Object)
+            CartModel cartModel = new CartModel(mockRepo.Object, testCart)
             {
                 PageContext = new PageContext(new ActionContext
                 {
